@@ -45,13 +45,14 @@ import {
 // 2. FIREBASE CONFIG
 // IMPORTANT: Paste your Firebase keys back in here!
 const firebaseConfig = {
-  apiKey: "AIzaSyCy5fYKJavxwDzGQTKiJ0zt8l5MvPJlsHQ",
-  authDomain: "access-for-good.firebaseapp.com",
-  projectId: "access-for-good",
-  storageBucket: "access-for-good.firebasestorage.app",
-  messagingSenderId: "552528886609",
-  appId: "1:552528886609:web:bd5ea11ce1d5e6cab7f170",
-  measurementId: "G-0H1NJ6T8YF"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY, 
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+  
 };
 
 // Initialize Firebase
