@@ -40,7 +40,7 @@ import {
 // --- CONFIGURATION ---
 
 // 1. API URL (Points to your local Node.js server)
-// const API_URL = 'http://localhost:3000/api'; 
+const API_URL = 'https://access-for-good.onrender.com/api';
 
 // 2. FIREBASE CONFIG
 // IMPORTANT: Paste your Firebase keys back in here!
