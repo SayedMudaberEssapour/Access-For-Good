@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Animation for the "Shake" effect on error */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+.shake-animation {
+  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+
+
+/* --- PRINT STYLES (For the PDF Export) --- */
+@media print {
+  /* Hide Navbar and Footer when printing */
+  header, footer, .print-hide {
+    display: none !important;
+  }
+  
+  /* Ensure background colors (like the impact badges) print correctly */
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background-color: white !important;
+  }
+
+  /* Remove page margins and drop shadows for a clean document */
+  main {
+    padding-top: 0 !important;
+  }
+  
+  .shadow-sm, .shadow-md, .shadow-xl {
+    box-shadow: none !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+}
